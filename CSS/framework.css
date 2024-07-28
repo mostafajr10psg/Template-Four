@@ -1,0 +1,270 @@
+/* Start Components  */
+
+.main-title {
+    margin: 20px 0 45px 20px;
+    position: relative;
+    width: fit-content;
+    font-size: 33px;
+    letter-spacing: -1px;
+}
+
+@media (max-width: 767px) {
+    .main-title {
+        margin-left: 10px;
+    }
+}
+
+.main-title::before {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    width: 120px;
+    height: 3px;
+    background-color: white;
+}
+
+.main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: black;
+}
+
+/* End Components  */
+
+/* Toggle Switch  */
+
+.btn-switch input {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.btn-switch .toggle-switch {
+    width: 78px;
+    height: 32px;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: var(--main-transition);
+}
+
+.btn-switch .toggle-switch::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f00d';
+    font-weight: 900;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background-color: white;
+    color: #aaa;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--main-transition);
+}
+
+.btn-switch input:checked+.toggle-switch {
+    background-color: var(--blue-color);
+}
+
+.btn-switch input:checked+.toggle-switch::before {
+    content: '\f00c';
+    left: 100%;
+    transform: translateX(calc(-100% - 4px));
+    color: var(--blue-color);
+}
+
+/* Toggle Switch  */
+
+/* Start aside  */
+aside {
+    box-shadow: 0px 0px 10px #dddddd;
+    position: relative;
+    min-height: 100vh;
+}
+
+aside h3 {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+@media (max-width: 767px) {
+    aside h3 {
+        font-size: 14px;
+        padding: 15px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    aside h3::before {
+        content: '';
+        position: absolute;
+        bottom: -0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: calc(100% + 28px);
+        background-color: black;
+    }
+
+    aside h3::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 50%;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: black;
+        transform: translate(-50%, 50%);
+        border: 5px solid white;
+    }
+}
+
+aside ul {
+    padding: 30px 20px;
+}
+
+@media (max-width: 767px) {
+    aside ul {
+        padding: 0 10px;
+    }
+}
+
+aside ul li a {
+    display: block;
+    color: black;
+    border-radius: 6px;
+    padding: 12px 65px 12px 15px;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 5px;
+    transition: var(--main-transition);
+}
+
+@media (max-width: 767px) {
+    aside ul li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+}
+
+aside ul li a:hover,
+aside ul li .active {
+    background-color: #f6f6f6;
+}
+
+aside ul li a span {
+    margin-left: 27px;
+}
+
+@media (max-width: 767px) {
+    aside ul li a span {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    aside ul li a i {
+        position: absolute;
+    }
+}
+
+/* End aside  */
+/* Start Nav  */
+nav {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+nav .search {
+    position: relative;
+    border: 1px solid #0000003d;
+    border-radius: 10px;
+}
+
+nav .search::before {
+    font-family: 'font awesome 5 free';
+    content: "\f002";
+    font-weight: 900;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--gray-color);
+}
+
+.search input {
+    width: 160px;
+    font-size: 13px;
+    padding: 10px 10px 10px 30px;
+    border: none;
+    outline: none;
+    transition: var(--main-transition);
+    background-color: transparent;
+}
+
+.search input:focus::placeholder {
+    transition: var(--main-transition);
+}
+
+.search input:focus::placeholder {
+    opacity: 0;
+}
+
+.search input:focus {
+    width: 200px;
+}
+
+.search i {
+    margin: 0 5px 0 10px;
+    color: #999999;
+    font-size: 14px;
+}
+
+.notice {
+    display: flex;
+    align-items: center;
+    width: 60px;
+}
+
+.notice i {
+    font-size: 20px;
+    position: relative;
+}
+
+.notice i::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--red-color);
+    right: -5px;
+    top: -7px;
+}
+
+.notice img {
+    width: 32px;
+    height: 32px;
+    margin-left: 15px;
+}
+
+/* End Nav  */
