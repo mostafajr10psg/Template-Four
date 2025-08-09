@@ -3,7 +3,6 @@ body {
   font-weight: 500;
 }
 
-/* Start Variabales  */
 :root {
   --main-transition: 0.3s;
   --main-color: #f1f5f9;
@@ -16,7 +15,6 @@ body {
   --border-b-color: #eee;
 }
 
-/* End Variabales  */
 html {
   scroll-behavior: smooth;
 }
